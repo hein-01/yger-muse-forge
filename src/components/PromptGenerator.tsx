@@ -44,7 +44,9 @@ export const PromptGenerator = ({ category }: PromptGeneratorProps) => {
     "A tall, young Asian male model stands confidently on a small red carpeted platform, facing a seated group of elderly women",
     "A graceful dancer moves fluidly across the space",
     "A professional presenter addresses the audience",
-    "A healthcare worker demonstrates procedures"
+    "A healthcare worker demonstrates procedures",
+    "A tall, young athletic asian male model who is reclining casually on a wooden table at the center of the group.",
+    "A tall, young athletic asian male model who is lying on a mat in a relaxed pose"
   ];
 
   const clothingOptions = [
@@ -67,7 +69,9 @@ export const PromptGenerator = ({ category }: PromptGeneratorProps) => {
 
   const poseOptions = [
     "His right arm is raised, bent at the elbow with his hand resting on or behind his head, while his left arm hangs relaxed by his side",
-    "His right arm is bent upward in a classic bicep flex pose, with his fist near his head, while his left hand rests on his hip. He flexed bicep with a proud expression"
+    "His right arm is bent upward in a classic bicep flex pose, with his fist near his head, while his left hand rests on his hip. He flexed bicep with a proud expression",
+    "He is leaning back on one elbow, with his upper body slightly twisted, and his other arm resting on his bent knee.",
+    "His both arms are raised above his head; his left hand grips his right elbow, pulling the right arm across the top of his head."
   ];
 
   const subject2Options = [
@@ -81,7 +85,8 @@ export const PromptGenerator = ({ category }: PromptGeneratorProps) => {
   ];
 
   const subject2PoseOptions = [
-    "seated in chairs arranged in a row. Most are smiling and gazing up at the model, with expressions of curiosity and attentiveness"
+    "seated in chairs arranged in a row. Most are smiling and gazing up at the model, with expressions of curiosity and attentiveness",
+    "seated in a semi-circle by facing him. Most are smiling and gazing at the model, with expressions of curiosity and attentiveness"
   ];
 
   const additionalTextOptions = [
