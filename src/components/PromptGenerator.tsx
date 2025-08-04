@@ -60,7 +60,9 @@ export const PromptGenerator = ({ category }: PromptGeneratorProps) => {
     "nike dunk low red/yellow",
     "vans classic Old Skool shoes",
     "open jean",
-    "unzipped jean"
+    "unzipped jean",
+    "white brief",
+    "yellow brief"
   ];
 
   const poseOptions = [
@@ -98,7 +100,7 @@ export const PromptGenerator = ({ category }: PromptGeneratorProps) => {
     const clothing = formData.subjectClothing.join(", ");
     const additional = formData.additionalText.join(" ");
     
-    return `Generate an image: ${formData.camera} ${formData.environment} ${formData.subject} He is wearing only ${clothing}, showcasing a lean and slightly toned physique. The elderly ${formData.subject2} women are ${formData.subject2Pose} ${additional}`;
+    return `Generate an image: ${formData.camera} ${formData.environment} ${formData.subject} He is wearing only ${clothing}, showcasing a lean and slightly toned physique. ${formData.subjectPose} The elderly ${formData.subject2} women are ${formData.subject2Pose} ${additional}`;
   };
 
   const copyToClipboard = () => {

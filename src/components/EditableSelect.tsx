@@ -36,7 +36,7 @@ export const EditableSelect = ({ options, value, onChange, placeholder }: Editab
           aria-expanded={open}
           className="w-full justify-between text-left font-normal"
         >
-          {value || placeholder}
+          <span className="truncate">{value || placeholder}</span>
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
