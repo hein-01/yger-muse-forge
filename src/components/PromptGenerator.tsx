@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Copy } from "lucide-react";
+import { Copy, RotateCcw } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { EditableSelect } from "@/components/EditableSelect";
 import { MultiSelect } from "@/components/MultiSelect";
@@ -117,6 +117,23 @@ export const PromptGenerator = ({ category }: PromptGeneratorProps) => {
     });
   };
 
+  const resetForm = () => {
+    setFormData({
+      camera: "",
+      environment: "",
+      subject: "",
+      subjectClothing: [],
+      subjectPose: "",
+      subject2: "",
+      subject2Pose: "",
+      additionalText: []
+    });
+    toast({
+      title: "Form reset!",
+      description: "All fields have been cleared.",
+    });
+  };
+
   return (
     <div className="space-y-6">
       <Card>
@@ -212,10 +229,16 @@ export const PromptGenerator = ({ category }: PromptGeneratorProps) => {
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             Generated Prompt
-            <Button onClick={copyToClipboard} size="sm" variant="outline">
-              <Copy className="h-4 w-4 mr-2" />
-              Copy
-            </Button>
+            <div className="flex gap-2">
+              <Button onClick={resetForm} size="sm" variant="outline">
+                <RotateCcw className="h-4 w-4 mr-2" />
+                Reset
+              </Button>
+              <Button onClick={copyToClipboard} size="sm" variant="outline">
+                <Copy className="h-4 w-4 mr-2" />
+                Copy
+              </Button>
+            </div>
           </CardTitle>
         </CardHeader>
         <CardContent>
